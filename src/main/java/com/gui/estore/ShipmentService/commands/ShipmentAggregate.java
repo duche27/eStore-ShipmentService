@@ -32,6 +32,9 @@ public class ShipmentAggregate {
                 .shipmentStatus("COMPLETED")
                 .build();
 
+//        if (true) throw new RuntimeException("FALLO EN SHIPMENT");
+
+
         // publicamos evento
         AggregateLifecycle.apply(orderShippedEvent);
     }

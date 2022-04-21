@@ -33,13 +33,13 @@ public class ShipmentEventsHandler {
 
     // lanza la excepción controlada si no persiste shipmentEntity
     // sin persistir nada, es transaccional
-    @ExceptionHandler(resultType = Exception.class)
+    @ExceptionHandler()
     private void handle(Exception exception) throws Exception {
         throw exception;
     }
 
     @ExceptionHandler(resultType = IllegalArgumentException.class)
     private void handle(IllegalArgumentException exception) throws IllegalArgumentException {
-//        throw IllegalArgumentException;
+        throw exception;
     }
 }
